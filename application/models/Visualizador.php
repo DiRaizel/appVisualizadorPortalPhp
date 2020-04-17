@@ -114,7 +114,7 @@ class Visualizador extends CI_Model {
         $empresa = $this->input->post("empresa");
         //
         $query = $this->db->query("select mensaje, TamanoLetra, nombreLogo, "
-                . "logo, CambioTv, VolumenVoz, IpVisualizador, id from configtv"
+                . "CambioTv, VolumenVoz, IpVisualizador, id from configtv"
                 . " where estado = $visualizador and emp_id = $empresa");
         //
         $datos = array();
@@ -127,7 +127,6 @@ class Visualizador extends CI_Model {
                     'mensaje' => $row->mensaje,
                     'tamanoLetra' => $row->TamanoLetra,
                     'nombrelogo' => $row->nombreLogo,
-                    'logo' => $row->logo,
                     'cambioTv' => $row->CambioTv,
                     'volumenVoz' => $row->VolumenVoz,
                     'ipVisualizador' => $row->IpVisualizador,
